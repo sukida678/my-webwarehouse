@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>我的专属导航页</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft Yahei", sans-serif;
+            background: #f0f2f5;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+        }
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 20px;
+        }
+        .link-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 15px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+        .link-item:hover {
+            transform: translateY(-5px);
+        }
+        .link-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>我的常用网站</h1>
+        <div class="link-grid">
+            <div class="link-item"><a href="https://github.com" target="_blank">GitHub</a></div>
+            <div class="link-item"><a href="https://www.bilibili.com" target="_blank">B站</a></div>
+            <div class="link-item"><a href="https://www.doubao.com" target="_blank">豆包</a></div>
+            <div class="link-item"><a href="https://www.yangshipin.cn" target="_blank">央视频</a></div>
+            <div class="link-item"><a href="https://www.natfrp.com" target="_blank">樱花</a></div>
+            <div class="link-item"><a href="https://mail.qq.com" target="_blank">QQ邮箱</a></div>
+            <!-- 👇 想加新网站，就复制下面这一行，改网址和名字 -->
+            <!-- <div class="link-item"><a href="你的网址" target="_blank">网站名字</a></div> -->
+        </div>
+    </div>
+</body>
+</html>

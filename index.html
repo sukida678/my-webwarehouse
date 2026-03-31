@@ -7,39 +7,51 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: "Microsoft Yahei", sans-serif;
-            background: #f0f2f5;
-            padding: 40px 20px;
+            background: url('https://picsum.photos/1920/1080?blur=2') center/cover fixed;
+            padding: 50px 20px;
+            min-height: 100vh;
         }
         .container {
             max-width: 900px;
             margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
         }
         h1 {
             text-align: center;
-            color: #1a1a1a;
+            color: #fff;
             margin-bottom: 40px;
+            font-size: 28px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
         }
         .link-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
             gap: 20px;
         }
         .link-item {
-            background: #fff;
-            border-radius: 12px;
-            padding: 20px 15px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 16px;
+            padding: 25px 15px;
             text-align: center;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            transition: transform 0.2s;
+            transition: all 0.3s ease;
         }
         .link-item:hover {
             transform: translateY(-5px);
+            background: rgba(255,255,255,0.3);
         }
         .link-item a {
             text-decoration: none;
-            color: #333;
-            font-size: 15px;
+            color: #fff;
+            font-size: 16px;
             font-weight: 500;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.2);
         }
     </style>
 </head>
@@ -53,8 +65,6 @@
             <div class="link-item"><a href="https://www.yangshipin.cn" target="_blank">央视频</a></div>
             <div class="link-item"><a href="https://www.natfrp.com" target="_blank">樱花</a></div>
             <div class="link-item"><a href="https://mail.qq.com" target="_blank">QQ邮箱</a></div>
-            <!-- 👇 想加新网站，就复制下面这一行，改网址和名字 -->
-            <!-- <div class="link-item"><a href="你的网址" target="_blank">网站名字</a></div> -->
         </div>
     </div>
 </body>

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的专属导航页</title>
+    <title>我的导航页</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,23 +14,25 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(0,0,0,0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(0,0,0,0.4);
+            backdrop-filter: blur(12px);
             border-radius: 20px;
             padding: 40px;
             border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
         h1 {
             text-align: center;
-            color: #fff;
+            color: #ffffff;
             font-weight: bold;
             margin-bottom: 40px;
             font-size: 32px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }
         .link-grid {
+            /* 👇 核心：固定2行3列，不再自动填充 */
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .link-item {
@@ -39,13 +41,15 @@
             padding: 25px 15px;
             text-align: center;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
         .link-item:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
         .link-item a {
             text-decoration: none;
-            color: #222;
+            color: #222222;
             font-size: 16px;
             font-weight: 600;
         }
@@ -64,4 +68,4 @@
         </div>
     </div>
 </body>
-</html>>
+</html>

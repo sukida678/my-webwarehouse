@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>我的导航页</title>
+    <title>我的专属导航页</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -14,12 +14,13 @@
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: rgba(0,0,0,0.4);
+            /* 👇 核心：恢复半透明毛玻璃，通透感拉满 */
+            background: rgba(255,255,255,0.15);
             backdrop-filter: blur(12px);
             border-radius: 20px;
             padding: 40px;
-            border: 1px solid rgba(255,255,255,0.3);
-            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.25);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
         }
         h1 {
             text-align: center;
@@ -30,22 +31,24 @@
             text-shadow: 0 2px 10px rgba(0,0,0,0.8);
         }
         .link-grid {
-            /* 👇 核心：固定2行3列，不再自动填充 */
+            /* 固定2行3列，整齐不错位 */
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
         }
         .link-item {
-            background: rgba(255,255,255,0.95);
+            /* 👇 按钮半透明，和背景融合 */
+            background: rgba(255,255,255,0.85);
             border-radius: 16px;
             padding: 25px 15px;
             text-align: center;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
         }
         .link-item:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            background: rgba(255,255,255,0.95);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
         }
         .link-item a {
             text-decoration: none;
@@ -60,7 +63,7 @@
         <h1>我的常用网站</h1>
         <div class="link-grid">
             <div class="link-item"><a href="https://github.com" target="_blank">GitHub</a></div>
-            <div class="link-item"><a href="https://www.bilibili.com" target="_blank">B站</a></div>
+            <div class="link-item"><a href="https://www.bilibili.com" target="_blank">GitHub</a></div>
             <div class="link-item"><a href="https://www.doubao.com" target="_blank">豆包</a></div>
             <div class="link-item"><a href="https://www.yangshipin.cn" target="_blank">央视频</a></div>
             <div class="link-item"><a href="https://www.natfrp.com" target="_blank">樱花</a></div>
